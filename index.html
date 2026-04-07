@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio Website</title>
+    <title>Avishek Poudel | AI & ML Practitioner</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/b351d06937.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <div id="header">
+    <!-- Header -->
+    <header id="header">
         <div class="container">
             <nav>
-                <img src="images/logo.png" class="logo">
+                <div class="logo">Avishek<span>.</span></div>
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -20,168 +22,202 @@
                     <li><a href="#contact">Contact</a></li>
                     <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
-                <i class="fas fa-bars" onclick="openmenu()"></i>
+                <div class="nav-right">
+                    <button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button>
+                    <i class="fas fa-bars" onclick="openmenu()"></i>
+                </div>
             </nav>
-            <div class="header-text">
-                <p>AI/ML Practitioner</p>
-                <h1> Hello, I'm <span>Avishek Poudel</span><br>from Nepal</h1>
-            </div>
-        </div>
 
-    </div>
-<!----------ABOUT----------->
- <div id="about">
-    <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src = "images/user.png">
+            <div class="header-text">
+                <p>AI/ML Practitioner &amp; Web Developer</p>
+                <h1>Hello, I'm <span>Avishek Poudel</span><br>from Nepal</h1>
+                <a href="#portfolio" class="btn">View My Work</a>
             </div>
-            <div class="about-col-2">
-                <h1 class="sub-title"> About Me</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo reiciendis minus magni sapiente voluptates nulla eveniet doloremque. Quasi, magni impedit.</p>
-                <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                    <p class="tab-links" onclick="opentab('education')">Education</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h1 class="sub-title">About Me</h1>
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png" alt="Avishek Poudel">
                 </div>
-                <div class="tab-contents active-tab" id="skills">
-                    <ul>
-                        <li><span>AI/ML</span><br>Designing, training, and deploying intelligent models</li>
-                        <li><span>Graphics Designing</span><br>Designing visual content and graphics</li>
-                        <li><span>Web Development</span><br>Developing interactive websites</li>
-                        <li><span>Hardware & IoT</span><br>Building hardware-based and IoT systems</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="experience">
-                    <ul>
-                        <li><span>AVISHEK</span><br>Designing, training, and deploying intelligent models</li>
-                        <li><span>Graphics Designing</span><br>Designing visual content and graphics</li>
-                        <li><span>Web Development</span><br>Developing interactive websites</li>
-                        <li><span>Hardware & IoT</span><br>Building hardware-based and IoT systems</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="education">
-                    <ul>
-                        <li><span>POUDEL</span><br>Designing, training, and deploying intelligent models</li>
-                        <li><span>Graphics Designing</span><br>Designing visual content and graphics</li>
-                        <li><span>Web Development</span><br>Developing interactive websites</li>
-                        <li><span>Hardware & IoT</span><br>Building hardware-based and IoT systems</li>
-                    </ul>
+                <div class="about-col-2">
+                    <p>Recent graduate in Electronics, Communication, and Information Engineering with a strong focus on Machine Learning and Artificial Intelligence. I specialize in developing deep learning models, NLP pipelines, and AI-driven hardware integrations.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" data-tab="skills">Skills</p>
+                        <p class="tab-links" data-tab="experience">Experience</p>
+                        <p class="tab-links" data-tab="education">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <div class="skills-container">
+                            <div class="skill-item">
+                                <span>AI/ML</span>
+                                <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Web Development</span>
+                                <div class="progress-bar"><div class="progress" style="width: 75%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Hardware & IoT</span>
+                                <div class="progress-bar"><div class="progress" style="width: 70%"></div></div>
+                            </div>
+                        </div>
+                        <ul class="tech-list">
+                            <li>Python (PyTorch, TensorFlow)</li>
+                            <li>NLP & Model Quantization</li>
+                            <li>Django, Flask, React</li>
+                            <li>Arduino, Raspberry Pi</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2025</span> Oral Presenter, Gandaki University International Conference</li>
+                            <li><span>2023</span> Organizer, CODE WITH COFFEE Web Development Workshop</li>
+                            <li><span>2022</span> Best Bot Design, Battle for Speed Robotics Competition</li>
+                            <li><span>2020</span> Best Performance Award, Fifth Young Scientists Summit</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021 – 2025</span> B.E. Electronics, Communication & Information Engineering (GPA: 3.6)</li>
+                            <li><span>2019 – 2021</span> Higher Secondary Education, Valmiki College (GPA: 3.38)</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
- </div> 
- <div id="services">
-    <div class="container">
-        <h1 class="sub-title">My Services</h1>
-        <div class="services-list">
-            <div>
-                <i class="fa-solid fa-crop"></i>
-                <h2> Web Design</h2>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, obcaecati.</p>
-                <a href="#">Learn more</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-brain"></i>
-                <h2> AI/ML</h2>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, obcaecati.</p>
-                <a href="#">Learn more</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-mobile-screen"></i>
-                <h2> App Design</h2>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, obcaecati.</p>
-                <a href="#">Learn more</a>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div class="service-card">
+                    <i class="fa-solid fa-brain"></i>
+                    <h2>AI/ML Development</h2>
+                    <p>Building custom Deep Learning models, NLP pipelines, and optimizing LLMs through quantization.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>Creating full-stack applications and AI-driven web interfaces using Django, Flask, and modern JS frameworks.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-microchip"></i>
+                    <h2>IoT Solutions</h2>
+                    <p>Designing intelligent hardware systems integrating sensors with real-time AI processing.</p>
+                </div>
             </div>
         </div>
-    </div>
- </div>
- <div id="portfolio">
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio">
     <div class="container">
         <h1 class="sub-title">My Work</h1>
         <div class="work-list">
-            <div class="work">
-                <img src="images/work-1.png">
-                <div class="layer">
-                    <h3>Social Media App</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, cupiditate!</p>
+            <div class="work-card">
+                <img src="images/work-1.png" alt="AI-Driven Depth Estimation">
+                <div class="work-info">
+                    <h3>AI-Driven Depth Estimation</h3>
+                    <p>Led a team in building a PyTorch system for depth and texture extraction from RGB images for 3D modeling[cite: 20, 21].</p>
+                    <div class="tags">
+                        <span>PyTorch</span><span>Raspberry Pi</span><span>3D Modeling</span>
+                    </div>
+                    <a href="#" class="btn-small">View Project →</a>
                 </div>
             </div>
-            <div class="work">
-                <img src="images/work-2.png">
-                <div class="layer">
-                    <h3>Music App</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, cupiditate!</p>
+
+            <div class="work-card">
+                <img src="images/work-2.png" alt="Medical Intelligence Platform">
+                <div class="work-info">
+                    <h3>Medical Intelligence Platform</h3>
+                    <p>Built a RAG pipeline using Pinecone and LangChain to enable real-time medical queries from private datasets[cite: 34, 35, 37].</p>
+                    <div class="tags">
+                        <span>Generative AI</span><span>RAG</span><span>Pinecone</span>
+                    </div>
+                    <a href="#" class="btn-small">View Project →</a>
                 </div>
             </div>
-            <div class="work">
-                <img src="images/work-3.png">
-                <div class="layer">
-                    <h3>Online Shopping App</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, cupiditate!</p>
+
+            <div class="work-card">
+                <img src="images/work-3.png" alt="GPT SLM & Quantization">
+                <div class="work-info">
+                    <h3>GPT SLM & Quantization</h3>
+                    <p>Developed a 6-layer Transformer from scratch and implemented Salience-Aware Quantization (2-bit to 4-bit)[cite: 38, 39, 42].</p>
+                    <div class="tags">
+                        <span>Transformers</span><span>Quantization</span><span>PyTorch</span>
+                    </div>
+                    <a href="#" class="btn-small">View Project →</a>
+                </div>
+            </div>
+
+            <div class="work-card">
+                <img src="images/work-1.png" alt="Multi-Agent Research Assistant"> <div class="work-info">
+                    <h3>Multi-Agent Research Assistant</h3>
+                    <p>Designed a collaborative LLM system using AutoGen to automate literature exploration and research tasks[cite: 31, 32, 33].</p>
+                    <div class="tags">
+                        <span>AutoGen</span><span>Multi-Agent Systems</span><span>LLMs</span>
+                    </div>
+                    <a href="#" class="btn-small">View Project →</a>
+                </div>
+            </div>
+
+            <div class="work-card">
+                <img src="images/work-2.png" alt="Accident Alert System"> <div class="work-info">
+                    <h3>Accident Alert System</h3>
+                    <p>Developed a hardware-based detection system using Arduino, GPS, and GSM modules for automated emergency alerts[cite: 28, 29, 30].</p>
+                    <div class="tags">
+                        <span>IoT</span><span>Arduino</span><span>Embedded Systems</span>
+                    </div>
+                    <a href="#" class="btn-small">View Project →</a>
                 </div>
             </div>
         </div>
-        <a href="#" class="btn">See more </a>
+        <a href="#" class="btn">See More Projects</a>
     </div>
- </div>
+</section>
 
-<div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-solid fa-inbox"></i></i>avishek.poudel.7777@gmail.com</p>
-                <p><i class="fa-solid fa-phone"></i>+977-9769458857</p>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/complicated.avi.111"><i class="fa-brands fa-square-facebook"></i></a>
+    <!-- Contact -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Get In Touch</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> avishek.poudel.7777@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +977-9845923008</p>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="images/Resume.pdf" download class="btn btn2">Download CV</a>
                 </div>
-                <a href="images/CV.pdf" download class="btn btn2">Download CV</a>
-            </div>
-            <div class="contact-right">
-                <form>
-                   <input type = "text" name="Name" placeholder="Your Name" required>
-                    <input type = "Email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form>
-                <span id="msg"></span>
+
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn2">Send Message</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="copyright">
-        <p>Copyright © AVISHEK.<i class="fa-solid fa-heart"></i></p>
-    </div>
-</div>
+        <div class="copyright">
+            <p>© 2026 Avishek Poudel. Made with <i class="fa-solid fa-heart"></i> in Nepal</p>
+        </div>
+    </section>
 
-
-
- <script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents"); 
-
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove("active-link");
-        }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-
-    }
- </script>  
- <script>
-    var sidemenu = document.getElementById("sidemenu");
-
-    function openmenu(){
-        sidemenu.style.right = "0";
-    }
-    function closemenu(){
-        sidemenu.style.right = "-200px";
-    }
- </script>
+    <script src="script.js"></script>
 </body>
 </html>
