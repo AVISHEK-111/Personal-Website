@@ -472,25 +472,3 @@ form input:focus, form textarea:focus {
         display: none;
     }
 }
-
-/* Moving Dots Background */
-#particles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;                    /* Above background image, below text */
-    pointer-events: none;
-    opacity: 0.65;                 /* Subtle effect */
-}
-
-header {
-    position: relative;
-    overflow: hidden;
-}
-
-.header-text {
-    position: relative;
-    z-index: 2;                    /* Text stays on top */
-}
