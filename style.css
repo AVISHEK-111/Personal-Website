@@ -144,7 +144,7 @@ section {
     transform: translateX(-50%);
 }
 
-/* About - Tab Fix */
+/* About */
 .row {
     display: flex;
     gap: 60px;
@@ -257,7 +257,7 @@ section {
 .services-list, .work-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
+    gap: 40px;
 }
 
 .service-card, .work-card {
@@ -285,18 +285,19 @@ section {
 }
 
 .work-card img {
-    width: 100%;
-    height: 220px;
+    width: 100% !important;
+    height: 480px !important;     /* Big, beautiful size for your 650x800 images */
     object-fit: cover;
+    display: block;
     transition: transform 0.5s ease;
 }
 
 .work-card:hover img {
-    transform: scale(1.08);
+    transform: scale(1.05);
 }
 
 .work-info {
-    padding: 25px 10px 10px;
+    padding: 25px 20px 20px;
 }
 
 .tags {
@@ -427,6 +428,10 @@ form input:focus, form textarea:focus {
     nav ul li {
         margin: 20px 0;
     }
+
+    .work-card img {
+        height: 300px !important;   /* Slightly smaller on mobile */
+    }
 }
 
 /* Light Mode */
@@ -445,7 +450,6 @@ form input:focus, form textarea:focus {
     display: none;
 }
 
-/* Show the close icon only on small screens */
 @media only screen and (max-width: 768px) {
     #sidemenu .fas.fa-times {
         display: block;
@@ -456,7 +460,6 @@ form input:focus, form textarea:focus {
         font-size: 25px;
     }
     
-    /* Ensure the bars icon is also visible on mobile */
     .fa-bars {
         display: block;
         font-size: 25px;
@@ -464,7 +467,6 @@ form input:focus, form textarea:focus {
     }
 }
 
-/* Hide the bars icon on desktop */
 @media only screen and (min-width: 769px) {
     .fa-bars {
         display: none;
