@@ -74,6 +74,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
+    transition: top 0.3s ease;
     z-index: 100;
     background: rgba(10,10,10,0.95);
     backdrop-filter: blur(10px);
@@ -471,4 +472,37 @@ form input:focus, form textarea:focus {
     .fa-bars {
         display: none;
     }
+}
+
+/* Moving Dots Background */
+#particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;                    /* Above background image, below text */
+    pointer-events: none;
+    opacity: 0.65;                 /* Subtle effect */
+}
+
+header {
+    position: relative;
+    overflow: hidden;
+}
+
+.header-text {
+    position: relative;
+    z-index: 2;                    /* Text stays on top */
+}
+
+.logo img {
+    height: 130px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
 }
